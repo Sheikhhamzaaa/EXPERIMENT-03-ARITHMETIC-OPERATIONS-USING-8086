@@ -235,30 +235,6 @@ HLT
 
 <img width="385" height="390" alt="image" src="https://github.com/user-attachments/assets/0eef9fdf-913d-4212-99e8-6f7e8d0f5594" />
 
-## RESULT
-
-The division of an unsigned dividend by an 8-bit unsigned divisor was performed using the 8086 microprocessor. The quotient and remainder were stored in the AL and AH registers, respectively, and verified.
-
----
-
-## OUTPUT OF SIMULATION
-
-### FIGURE 1: ADDITION OUTPUT
-
-Insert the screenshot showing the successful execution of the addition program here.
-
-### FIGURE 2: SUBTRACTION OUTPUT
-
-Insert the screenshot showing the successful execution of the subtraction program here.
-
-### FIGURE 3: MULTIPLICATION OUTPUT
-
-Insert the screenshot showing the successful execution of the multiplication program here.
-
-### FIGURE 4: DIVISION OUTPUT
-
-Insert the screenshot showing the successful execution of the division program here.
-
 ## OVERALL RESULT
 
 The 8086 Assembly Language programs for addition, subtraction, multiplication, and division were written and executed using the Online 8086 Emulator. The results were verified by observing the corresponding register values.

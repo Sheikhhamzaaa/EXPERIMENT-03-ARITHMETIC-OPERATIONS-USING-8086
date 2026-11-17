@@ -93,112 +93,147 @@ The 8086 contains registers that temporarily store data, addresses, and intermed
 
 ---
 
-# EXPERIMENT 1: ADDITION
+## EXPERIMENT 1: ADDITION
 
-## AIM
-
+### AIM:
 To perform the addition of two 8-bit numbers using the 8086 microprocessor.
 
-## PROGRAM
+### PROGRAM:
 
-[Existing program code retained unchanged.]
+```asm
+MOV AL, 05H
+MOV BL, 03H
+ADD AL, BL
+HLT
+```
 
-## EXPLANATION
+### EXPLANATION:
 
-1. Load the first 8-bit number, 05H, into the AL register using the MOV instruction.
-2. Load the second 8-bit number, 03H, into the BL register using the MOV instruction.
-3. Use the ADD instruction to add the contents of AL and BL.
-4. The addition result is stored in the destination register, AL.
-5. The HLT instruction stops program execution.
+1. Load the first number 05H into AL.
+2. Load the second number 03H into BL.
+3. Perform addition using the ADD instruction.
+4. The result is stored in AL.
 
-## EXPECTED OUTPUT
+### EXPECTED OUTPUT:
 
-[Existing expected output retained unchanged.]
+| Register | Value |
+|---|---|
+| AL | 08H |
+| BL | 03H |
 
-## RESULT
+**Result:** 05H + 03H = 08H.
 
-The addition of two 8-bit numbers was performed using the 8086 microprocessor. The result was stored in the AL register and verified.
+## EXPERIMENT 2: SUBTRACTION
 
----
-
-# EXPERIMENT 2: SUBTRACTION
-
-## AIM
-
+### AIM:
 To perform the subtraction of two 8-bit numbers using the 8086 microprocessor.
 
-## PROGRAM
+### PROGRAM:
 
-[Existing program code retained unchanged.]
+```asm
+MOV AL, 09H
+MOV BL, 04H
+SUB AL, BL
+HLT
+```
 
-## EXPLANATION
+### EXPLANATION:
 
-1. Load the first 8-bit number, 09H, into the AL register using the MOV instruction.
-2. Load the second 8-bit number, 04H, into the BL register using the MOV instruction.
-3. Use the SUB instruction to subtract the contents of BL from AL.
-4. The subtraction result is stored in the destination register, AL.
-5. The HLT instruction stops program execution.
+1. Load the first number 09H into AL.
+2. Load the second number 04H into BL.
+3. Perform subtraction using the SUB instruction.
+4. The result is stored in AL.
 
-## EXPECTED OUTPUT
+### EXPECTED OUTPUT:
 
-[Existing expected output retained unchanged.]
+| Register | Value |
+|---|---|
+| AL | 05H |
+| BL | 04H |
 
-## RESULT
+**Result:** 09H - 04H = 05H.
 
-The subtraction of two 8-bit numbers was performed using the 8086 microprocessor. The result was stored in the AL register and verified.
+## EXPERIMENT 3: MULTIPLICATION
 
----
-
-# EXPERIMENT 3: MULTIPLICATION
-
-## AIM
-
+### AIM:
 To perform the multiplication of two 8-bit unsigned numbers using the 8086 microprocessor.
 
-## PROGRAM
+### PROGRAM:
 
-[Existing program code retained unchanged.]
+```asm
+MOV AL, 05H
+MOV BL, 04H
+MUL BL
+HLT
+```
 
-## EXPLANATION
+### EXPLANATION:
 
-1. Load the first 8-bit unsigned number, 05H, into the AL register.
-2. Load the second 8-bit unsigned number, 04H, into the BL register.
-3. Use the MUL instruction with BL as the operand. For 8-bit multiplication, the processor multiplies AL by BL.
-4. The 16-bit product is stored in the AX register, with the higher 8 bits in AH and the lower 8 bits in AL.
-5. The HLT instruction stops program execution.
+1. Load the first number 05H into AL.
+2. Load the second number 04H into BL.
+3. Perform multiplication using the MUL instruction.
+4. The 16-bit result is stored in AX (AH:AL).
 
-## EXPECTED OUTPUT
+### EXPECTED OUTPUT:
 
-[Existing expected output retained unchanged.]
+| Register | Value |
+|---|---|
+| AL | 14H |
+| AH | 00H |
+| AX | 0014H |
 
-## RESULT
+**Result:** 05H × 04H = 14H.
 
-The multiplication of two 8-bit unsigned numbers was performed using the 8086 microprocessor. The 16-bit product was stored in the AX register and verified.
+## EXPERIMENT 4: DIVISION
 
----
-
-# EXPERIMENT 4: DIVISION
-
-## AIM
-
+### AIM:
 To perform the division of two 8-bit unsigned numbers using the 8086 microprocessor.
 
-## PROGRAM
+### PROGRAM:
 
-[Existing program code retained unchanged.]
+```asm
+MOV AX, 0014H
+MOV BL, 04H
+DIV BL
+HLT
+```
 
-## EXPLANATION
+### EXPLANATION:
 
-1. Load the 16-bit dividend, 0014H, into the AX register.
-2. Load the 8-bit divisor, 04H, into the BL register.
-3. Use the DIV instruction with BL as the operand. For 8-bit division, the processor divides AX by BL.
-4. The quotient is stored in the AL register.
-5. The remainder is stored in the AH register.
-6. The HLT instruction stops program execution.
+1. Load the dividend 0014H into AX.
+2. Load the divisor 04H into BL.
+3. Perform division using the DIV instruction.
+4. The quotient is stored in AL.
+5. The remainder is stored in AH.
 
-## EXPECTED OUTPUT
+### EXPECTED OUTPUT:
 
-[Existing expected output retained unchanged.]
+| Register | Value |
+|---|---|
+| AL | 05H |
+| AH | 00H |
+
+**Result:** 14H ÷ 04H = 05H, Remainder = 00H.
+
+## OUTPUT OF SIMULATION:
+
+### FIGURE-01: ADDITION OUTPUT
+
+<img width="402" height="392" alt="image" src="https://github.com/user-attachments/assets/24723076-ce8c-482b-90c0-72ecb7966aed" />
+
+### FIGURE-02: SUBTRACTION OUTPUT
+
+<img width="407" height="398" alt="image" src="https://github.com/user-attachments/assets/6af6bb72-0313-45a5-a0d3-586ee7808c32" />
+
+
+### FIGURE-03: MULTIPLICATION OUTPUT
+
+<img width="402" height="402" alt="image" src="https://github.com/user-attachments/assets/56c1c093-4368-4ab7-aa64-2006d3d471ce" />
+
+
+### FIGURE-04: DIVISION OUTPUT
+
+<img width="385" height="390" alt="image" src="https://github.com/user-attachments/assets/0eef9fdf-913d-4212-99e8-6f7e8d0f5594" />
 
 ## RESULT
 
